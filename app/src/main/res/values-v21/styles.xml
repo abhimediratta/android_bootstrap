@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/toolbar_bg_color</item>
+        <item name="android:colorPrimaryDark">@color/status_bar_color</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
+
+        <item name="popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
+    </style>
+</resources>

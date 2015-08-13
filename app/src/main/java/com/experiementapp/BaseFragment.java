@@ -34,5 +34,7 @@ public class BaseFragment extends Fragment {
         super.onDestroy();
         RefWatcher refWatcher = ExperimentApp.getRefWatcher();
         refWatcher.watch(this);
+
+        ButterKnife.unbind(this);
     }
 }
