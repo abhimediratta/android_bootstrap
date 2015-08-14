@@ -3,4 +3,5 @@
     <color name="toolbar_bg_color">#3b3b3b</color>
     <color name="status_bar_color">#FF232323</color>
     <color name="toolbar_text_color">#f1f1f1</color>
+    <color name="fb_color">#3b5998</color>
 </resources>

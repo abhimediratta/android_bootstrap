@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.leakcanary.RefWatcher;
-
 import butterknife.ButterKnife;
 
 /**
@@ -32,8 +30,8 @@ public class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        RefWatcher refWatcher = ExperimentApp.getRefWatcher();
-        refWatcher.watch(this);
+//        RefWatcher refWatcher = ExperimentApp.getRefWatcher();
+//        refWatcher.watch(this);
 
         ButterKnife.unbind(this);
     }

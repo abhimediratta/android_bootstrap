@@ -3,21 +3,24 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="android:popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
-
-        <item name="popupMenuStyle">@android:style/Widget.Holo.Light.PopupMenu</item>
     </style>
 
     <style name="Toolbar">
         <item name="android:textColorPrimary">@color/toolbar_text_color</item>
         <item name="android:textColor">@color/toolbar_text_color</item>
         <item name="android:background">@color/toolbar_bg_color</item>
-
     </style>
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@color/toolbar_text_color</item>
+    </style>
+
+    <style name="FBButton">
+        <!--<item name="android:textSize">@dimen/smallTxtSize</item>-->
+        <item name="android:background">@color/fb_color</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
 </resources>
