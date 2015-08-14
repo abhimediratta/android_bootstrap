@@ -19,7 +19,6 @@
     <style name="FBButton">
         <!--<item name="android:textSize">@dimen/smallTxtSize</item>-->
         <item name="android:background">@color/fb_color</item>
-        <item name="android:padding">10dp</item>
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
