@@ -2,6 +2,7 @@ package com.experiementapp.components;
 
 import com.experiementapp.ExperimentApp;
 import com.experiementapp.MainActivity;
+import com.experiementapp.fragments.MainFragment;
 import com.experiementapp.modules.ApiModule;
 import com.experiementapp.modules.AppModule;
 
@@ -21,6 +22,7 @@ import dagger.Component;
 )
 public interface ExperimentAppComponent {
     void inject(MainActivity mainActivity);
+    void inject(MainFragment mainFragment);
 
     final class AppComponentInitializer {
         private AppComponentInitializer() {

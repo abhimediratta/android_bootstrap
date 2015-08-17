@@ -8,8 +8,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">LoginActivity</string>
     
-    <string name="facebook_app_id">858023057614902</string>
+
     <string name="loginFacebookButton">Facebook</string>
     <string name="logoutFacebookButton">Logout</string>
     <string name="loginGoogleButton">Google</string>
+
+
+    <string name="facebook_app_id">858023057614902</string>
+    <string name="github_token">9e3732dd08c82130dd330f18fd02093ef9f41e84</string>
 </resources>
