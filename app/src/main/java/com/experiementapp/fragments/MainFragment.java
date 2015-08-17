@@ -12,7 +12,7 @@ import android.widget.Button;
 import com.experiementapp.BaseFragment;
 import com.experiementapp.ExperimentApp;
 import com.experiementapp.R;
-import com.experiementapp.RxUtils;
+import com.experiementapp.utils.RxUtils;
 import com.experiementapp.api.ApiManager;
 import com.experiementapp.models.User;
 

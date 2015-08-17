@@ -1,4 +1,4 @@
-package com.experiementapp;
+package com.experiementapp.utils;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
