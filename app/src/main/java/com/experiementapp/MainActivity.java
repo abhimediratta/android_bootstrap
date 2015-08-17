@@ -1,5 +1,6 @@
 package com.experiementapp;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,9 +12,15 @@ import android.view.MenuItem;
 import com.experiementapp.fragments.MainFragment;
 import com.experiementapp.fragments.NavigationDrawerFragment;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
+import timber.log.Timber;
 
 public class MainActivity extends LoggedInBaseActivity implements NavigationDrawerFragment.NavigationFragmentInteractionListener {
+
+    @Inject
+    Resources resources;
 
     @Bind(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
@@ -21,6 +28,10 @@ public class MainActivity extends LoggedInBaseActivity implements NavigationDraw
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState, R.layout.activity_main);
+
+        ExperimentApp.component().inject(this);
+
+        Timber.d("Resource example: " + resources.getString(R.string.loginFacebookButton));
 
         setUpDrawer();
         getSupportFragmentManager().beginTransaction().add(R.id.main_container, MainFragment.newInstance()).commit();
