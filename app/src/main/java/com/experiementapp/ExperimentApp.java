@@ -31,7 +31,9 @@ public class ExperimentApp extends Application {
 
         buildComponentAndInject();
 
-        Timber.plant(new Timber.DebugTree());
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
 
     }
 
