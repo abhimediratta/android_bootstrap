@@ -1,6 +1,16 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'me.tatarka.retrolambda'
+
+retrolambda {
+    jdk "/usr/lib/jvm/java-8-oracle"
+    oldJdk "/usr/lib/jvm/java-6-oracle"
+    javaVersion JavaVersion.VERSION_1_6
+    jvmArgs '', ''
+    defaultMethods false
+    incremental true
+}
 
 android {
     compileSdkVersion 22
@@ -22,6 +32,11 @@ android {
 
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -52,4 +67,8 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
+
+    compile 'com.android.support:design:22.2.1'
 }
+
+

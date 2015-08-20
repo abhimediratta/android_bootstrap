@@ -12,15 +12,14 @@ import android.widget.Button;
 import com.experiementapp.BaseFragment;
 import com.experiementapp.ExperimentApp;
 import com.experiementapp.R;
-import com.experiementapp.utils.RxUtils;
 import com.experiementapp.api.ApiManager;
 import com.experiementapp.models.User;
+import com.experiementapp.utils.RxUtils;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.OnClick;
-import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
@@ -89,22 +88,10 @@ public class MainFragment extends BaseFragment {
         mCompositeSubscription.add(gitHubService.user("abhimediratta")
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(new Observer<User>() {
-            @Override
-            public void onCompleted() {
-                Timber.d("Call Complete");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                Timber.e(e, "woops we got an error while getting user details");
-            }
-
-            @Override
-            public void onNext(User user) {
-                //Timber.d("Call Complete, User details: " + user.getName());
-            }
-        }));
+        .subscribe(
+                (User u) -> Timber.d("User details: " + u.getName()),
+                (Throwable e) -> Timber.e("Error on fetch: " + e.getMessage())
+        ));
     }
 
 
