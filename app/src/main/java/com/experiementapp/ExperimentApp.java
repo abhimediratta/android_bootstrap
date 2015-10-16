@@ -1,6 +1,7 @@
 package com.experiementapp;
 
 import android.app.Application;
+import android.os.StrictMode;
 
 import com.experiementapp.components.ExperimentAppComponent;
 
@@ -32,9 +33,25 @@ public class ExperimentApp extends Application {
         buildComponentAndInject();
 
         if (BuildConfig.DEBUG) {
+            setupStrictMode();
             Timber.plant(new Timber.DebugTree());
         }
 
+    }
+
+    private void setupStrictMode(){
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                .detectDiskReads()
+                .detectDiskWrites()
+                .detectNetwork()   // or .detectAll() for all detectable problems
+                .penaltyLog()
+                .build());
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                .detectLeakedSqlLiteObjects()
+                .detectLeakedClosableObjects()
+                .penaltyLog()
+                .penaltyDeath()
+                .build());
     }
 
     public static ExperimentAppComponent component() {

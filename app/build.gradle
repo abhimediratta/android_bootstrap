@@ -69,6 +69,8 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
 
     compile 'com.android.support:design:22.2.1'
+
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
 }
 
 
